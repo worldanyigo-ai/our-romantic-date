@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090a10">
+<title>給皮淡仙女的一封邀請</title>
+<style>
+:root{color-scheme:dark;--gold:#e5c98a;--cream:#fff7e8;--muted:#b7b0a4;--panel:rgba(18,19,26,.78)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#090a10;color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif}
+body{min-height:100svh;overflow-x:hidden;background:radial-gradient(ellipse at 50% 10%,#28202a 0%,#11121a 43%,#07080c 100%)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 100%),radial-gradient(1px 1px at 80% 23%,#e5c98a 50%,transparent 100%),radial-gradient(2px 2px at 69% 72%,#fff 50%,transparent 100%),radial-gradient(1px 1px at 24% 77%,#fff 50%,transparent 100%),radial-gradient(1px 1px at 91% 58%,#e5c98a 50%,transparent 100%),radial-gradient(1px 1px at 43% 36%,#fff 50%,transparent 100%);}
+main{position:relative;display:grid;place-items:center;min-height:100svh;padding:28px 18px 36px}
+.card{width:min(100%,460px);position:relative;text-align:center;padding:36px 23px 30px;border:1px solid rgba(229,201,138,.35);border-radius:5px;background:linear-gradient(145deg,rgba(28,27,35,.91),var(--panel));box-shadow:0 24px 90px #0008;overflow:hidden}
+.card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(229,201,138,.12);pointer-events:none}
+.eyebrow{letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-size:10px;margin-bottom:26px}
+.ornament{font-size:25px;color:var(--gold);margin-bottom:17px;opacity:.9}
+h1{font-family:Georgia,"Songti TC",serif;font-weight:400;font-size:clamp(31px,8vw,43px);line-height:1.35;letter-spacing:.08em;margin:0 0 12px}
+.name{color:var(--gold)}
+.subtitle{font-family:Georgia,"Songti TC",serif;font-size:15px;letter-spacing:.22em;color:#d7cdbb;margin:0 0 25px}
+.rule{height:1px;width:56px;background:var(--gold);opacity:.7;margin:0 auto 24px}
+.message{font-size:15px;line-height:2;color:#e8e1d5;margin:0 auto 9px;max-width:300px}
+.restaurant{font-size:12px;letter-spacing:.15em;color:var(--gold);margin:0 0 27px}
+.question{font-size:14px;color:#d7d0c4;margin:0 0 18px}
+.buttons{position:relative;display:flex;align-items:center;justify-content:center;gap:13px;min-height:54px;margin:0 auto;width:100%;max-width:320px}
+button{font:inherit;border:0;min-height:47px;border-radius:3px;padding:12px 20px;cursor:pointer;touch-action:manipulation;transition:transform .18s,background .18s,border-color .18s}
+#yes{background:linear-gradient(135deg,#f2dfb2,#c9a45d);color:#19140b;font-weight:700;box-shadow:0 7px 25px #d8b76c2b;flex:1;max-width:175px}
+#yes:active{transform:scale(.97)}
+#no{background:#ffffff08;color:#d6d0c6;border:1px solid #ffffff35;min-width:110px;z-index:2}
+.hint{min-height:18px;margin:18px 0 0;font-size:11px;color:#8f887d;letter-spacing:.04em}
+.foot{font-size:10px;color:#7e776d;letter-spacing:.18em;margin-top:29px}
+.hidden{display:none!important}
+#surprise{animation:appear .9s ease both}
+.big-heart{font-size:42px;color:#e6c98d;margin:8px 0 15px;animation:pulse 1.8s ease-in-out infinite}
+.surprise-title{font-size:31px;line-height:1.5;margin-bottom:12px}
+.surprise-copy{font-size:15px;line-height:2;color:#e8e1d5}
+.small-note{font-size:11px;color:#a69c8b;margin-top:22px;letter-spacing:.08em}
+#again{margin-top:20px;border:1px solid #c9aa6a;background:transparent;color:var(--gold);font-size:12px}
+.confetti{position:fixed;top:-30px;z-index:10;pointer-events:none;animation:fall 3.2s linear forwards;font-size:19px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes fall{to{transform:translateY(110svh) rotate(380deg);opacity:0}}
+@media(max-height:650px){.card{padding:25px 20px}.eyebrow{margin-bottom:16px}.foot{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main>
+<section class="card" aria-live="polite">
+  <div id="invitation">
+    <div class="eyebrow">A PRIVATE INVITATION · NO. 001</div>
+    <div class="ornament">✦　❦　✦</div>
+    <h1>致 <span class="name">皮淡仙女</span></h1>
+    <p class="subtitle">一場只屬於我們的約會</p>
+    <div class="rule"></div>
+    <p class="message">找一天好好陪妳，<br>一起吃頓飯 ❤️</p>
+    <p class="restaurant">地點：神祕餐廳 · 保留驚喜</p>
+    <p class="question">仙女大人，願意赴約嗎？</p>
+    <div class="buttons" id="buttonArea">
+      <button id="yes" type="button">欣然赴約　♥</button>
+      <button id="no" type="button">再想一下</button>
+    </div>
+    <p class="hint" id="hint">請選擇妳的答案。</p>
+    <div class="foot">WITH LOVE · JUST FOR YOU</div>
+  </div>
+  <div id="surprise" class="hidden">
+    <div class="eyebrow">THE ANSWER IS BEAUTIFUL</div>
+    <div class="big-heart">♥</div>
+    <h2 class="surprise-title">約會成立！</h2>
+    <p class="surprise-copy">謝謝仙女大人賞臉。<br>餐廳先保密，驚喜交給我準備。<br><br>找一天好好陪妳，<br>把平凡的一餐，變成我們的回憶。❤️</p>
+    <div class="rule" style="margin-top:24px"></div>
+    <p class="small-note">期待和妳見面的那一天。</p>
+    <button id="again" type="button">再看一次邀請</button>
+    <div class="foot">END SCENE · OUR STORY CONTINUES</div>
+  </div>
+</section>
+</main>
+<script>
+(() => {
+  const no = document.getElementById('no');
+  const yes = document.getElementById('yes');
+  const area = document.getElementById('buttonArea');
+  const hint = document.getElementById('hint');
+  const invitation = document.getElementById('invitation');
+  const surprise = document.getElementById('surprise');
+  const again = document.getElementById('again');
+  let attempts = 0;
+  let moved = false;
+  const teasing = ['哎呀，差一點點！','這個答案要不要再考慮一下？','按鈕好像也希望妳答應呢。','仙女大人，真的不再想想嗎？','最後一次機會……才怪！'];
+
+  function moveNoButton() {
+    if (surprise.classList.contains('hidden') === false) return;
+    const areaRect = area.getBoundingClientRect();
+    const noRect = no.getBoundingClientRect();
+    const yesRect = yes.getBoundingClientRect();
+    // Keep the button inside the invitation card and away from the yes button.
+    no.style.position = 'absolute';
+    no.style.left = Math.max(0, Math.random() * Math.max(0, areaRect.width - noRect.width)) + 'px';
+    no.style.top = (Math.random() > .5 ? -1 : 1) * (10 + Math.random() * 20) + 'px';
+    const overlapsYes = () => {
+      const r = no.getBoundingClientRect();
+      const y = yes.getBoundingClientRect();
+      return !(r.right < y.left - 8 || r.left > y.right + 8 || r.bottom < y.top - 8 || r.top > y.bottom + 8);
+    };
+    let tries = 0;
+    while (overlapsYes() && tries++ < 8) {
+      no.style.left = Math.max(0, Math.random() * Math.max(0, areaRect.width - noRect.width)) + 'px';
+      no.style.top = (Math.random() > .5 ? -1 : 1) * (14 + Math.random() * 25) + 'px';
+    }
+    attempts++;
+    moved = true;
+    hint.textContent = teasing[Math.min(attempts - 1, teasing.length - 1)];
+  }
+
+  no.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') moveNoButton(); });
+  no.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'touch' || e.pointerType === 'pen') {
+      e.preventDefault();
+      moveNoButton();
+    }
+  });
+  no.addEventListener('click', (e) => { e.preventDefault(); moveNoButton(); });
+  yes.addEventListener('click', () => {
+    invitation.classList.add('hidden');
+    surprise.classList.remove('hidden');
+    showerHearts();
+  });
+  again.addEventListener('click', () => {
+    surprise.classList.add('hidden');
+    invitation.classList.remove('hidden');
+    no.style.position = '';
+    no.style.left = '';
+    no.style.top = '';
+    attempts = 0;
+    moved = false;
+    hint.textContent = '請選擇妳的答案。';
+  });
+  function showerHearts() {
+    const symbols = ['♥','✦','♡','✧'];
+    for (let i = 0; i < 26; i++) {
+      const el = document.createElement('span');
+      el.className = 'confetti';
+      el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.animationDelay = Math.random() * 1.2 + 's';
+      el.style.fontSize = (13 + Math.random() * 17) + 'px';
+      document.body.appendChild(el);
+      el.addEventListener('animationend', () => el.remove(), {once:true});
+    }
+  }
+})();
+</script>
+</body>
+</html>
